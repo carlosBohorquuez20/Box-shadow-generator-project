@@ -111,7 +111,7 @@ header h1{
 }
 /**cajas de numeros*/
 .box-number{
-  width: 50px;
+  width: 65px;
   height: 40px;
   border-radius: 20%;
   appearance: textfield;
