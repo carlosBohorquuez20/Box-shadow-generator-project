@@ -1,0 +1,275 @@
+html{
+  box-sizing: border-box;
+  
+}
+
+*, *:after, *:before{
+  box-sizing: inherit;
+}
+
+body{
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 480px) {
+  body{
+    overflow-y:auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+header{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+  border-bottom: 1px solid black;
+}
+
+header h1{
+  color: white;
+  padding: 10px;
+  margin: 0;
+  margin-left: 10px;
+}
+/**contenido general separados por flex*/
+.content-shadow{
+  width: 100% ;
+  height: 89%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .content-shadow{
+    width: 100% ;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+/**parte izquierda */
+.left-menu{
+  background-color: #14213d;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid black;
+  width:  33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media (max-width: 480px) {
+  .left-menu{
+    width:  100%;
+    height: 90vh;
+    padding-bottom: 10px;
+  }
+}
+/**boton remover*/
+.remove-box{
+  padding: 10px;
+  background-color: #da242e;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.separator-checkbox-remove{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-active-inset{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/**Opciones general de configuracion*/
+.box-options{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+
+}
+/**Opciones detro del contenido*/
+.separator-options{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/**cajas de numeros*/
+.box-number{
+  width: 40px;
+  height: 30px;
+  border-radius: 20%;
+  appearance: textfield;
+  text-align: center;
+}
+/**inputs de rangos*/
+.inputs-ranges{
+  width: 100%;
+  cursor: pointer;
+}
+
+.box-color{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.color-shadow{
+  margin-top: 10px;
+  width: 100%;
+}
+/**contenido general de cuadrado*/
+.square-content{
+  width: 40%;
+  height: 100%;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+@media (max-width: 480px) {
+  .square-content{
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+/**diseño de cuadrado*/
+.square-middle{
+  width: 100px;
+  height:  100px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.9);
+}
+/**conetnido general izquierdo*/
+.rigth-menu{
+  background-color: #14213d;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid black;
+  width:  33%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+
+@media (max-width: 480px) {
+  .rigth-menu{
+    width:  100%;
+    height: 70vh;
+  }
+}
+/**color de cuadrado*/
+.color-square{
+  width: 100%;
+  margin-top: 10px;
+}
+
+/**boton de mostrar box shadow*/
+.show-code{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #0093b4;
+  color: white;
+}
+/**modal general diseño*/
+.modal{
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+/**modal oculto*/
+.modal-show{
+  opacity: 1;
+  pointer-events: unset;
+}
+/**modal contenido*/
+.modal-content{
+  color: white;
+  background-color: #14213d;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .modal-content{
+    width: 250px;
+    height: 300px;
+
+  }
+}
+/**modal donde se muestra el box-shadow*/
+.show-box-shadow{
+ background-color: rgba(0, 0, 0, 0.1);
+ width: 200px;
+ height: 200px;
+}
+
+/**boton cerrar*/
+.close-content{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+
+}
+.close{
+  background-color: #63dede;
+  width: 70px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/**footer*/
+footer{
+  border-top: 1px solid black;
+  width: 100%;
+  height: 10%;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  background-color: #000000;
+}
+
+@media (max-width: 480px) {
+  footer{
+   
+    width: 100%;
+    height: 6.5vh;
+
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Box Shadows</title>
+</head>
+
+<body>
+  <header>
+    <h1>Box Shadows</h1>
+  </header>
+  <!-- separacion del lado izquierdo, medio y lado derecho -->
+  <div class="content-shadow">
+    <!--lado izquierdo -->
+    <div class="left-menu">
+      <h2>Customize Shadows</h2>
+      <p>Shadow</p>
+      <div class="separator-checkbox-remove">
+        <div class="checkbox-active-inset">
+          <input type="checkbox" name="" id="active" class="active-shadow" checked>
+          <label for="active">Active</label>
+          <input type="checkbox" name="" id="inset" class="inset-shadow">
+          <label for="inset">Inset</label>
+        </div>
+        <input type="button" name="" id="" value="Remove" class="remove-box">
+      </div>
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="horizontal-offset">Horizontal offset</label>
+          <div>
+            <input type="number" id="horizontal-offset" class="box-number number-horizontal-offset number-shadow"
+              value="0">
+            px
+          </div>
+        </div>
+        <input type="range" class="range-horizontal-offset" min="-100" max="100" value="0">
+      </div>
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="vertical-offset">Vertical offset</label>
+          <div>
+            <input type="number" id="vertical-offset" class="box-number number-vertical-offset number-shadow n-r-inputs"
+              value="0">
+            px
+          </div>
+        </div>
+        <input type="range" class="range-vertical-offset" min="-100" max="100" value="0">
+      </div>
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="blur-radius">Blur radius</label>
+          <div>
+            <input type="number" id="blur-radius" class="box-number number-blur-radius number-shadow" min="0" max="100"
+              value="0">
+            px
+          </div>
+        </div>
+        <input type="range" class="range-blur-radius" min="0" max="100" value="0">
+      </div>
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="spread-radius">Spread radius</label>
+          <div>
+            <input type="number" id="spread-radius" class="box-number number-spread number-shadow" value="0">
+            px
+          </div>
+        </div>
+        <input type="range" class="range-spread-radius" min="-100" max="100" value="0">
+      </div>
+      <div class="box-color">
+        <label for="color-shadow">Color Shadow<label>
+            <input type="text" class="color-shadow" id="shadow-color" value="rgba(0,0,0,0.9)">
+      </div>
+    </div>
+    <!--cuadrado diseño del cotenido-->
+    <div class="square-content">
+      <div class="square-middle"></div>
+    </div>
+    <!--lado derecho-->
+    <div class="rigth-menu">
+      <h2>Box Properties</h2>
+      <label for="background-color">Background color</label>
+      <input type="color" id="background-color" class="color-square">
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="border-radius">Border radius</label>
+          <div>
+            <input type="number" id="border-radius" class="box-number number-radius">
+            px
+          </div>
+        </div>
+        <input type="range" class="inputs-ranges range-border-radius" min="0" max="100">
+      </div>
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="height">Height</label>
+          <div>
+            <input type="number" id="height" class="box-number number-height">
+            px
+          </div>
+        </div>
+        <input type="range" class="inputs-ranges range-height" min="0" max="300">
+      </div>
+      <div class="box-options">
+        <div class="separator-options">
+          <label for="width">Width</label>
+          <div>
+            <input type="number" id="width" class="box-number number-width">
+            px
+          </div>
+        </div>
+        <input type="range" class="inputs-ranges range-width" min="0" max="300">
+      </div>
+      <input type="button" value="Show Code" class="show-code">
+    </div>
+  </div>
+  <!--Ventana modal-->
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Your generated style is:</h2>
+      <code class="show-box-shadow">box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.9);</code>
+      <div class="close-content">
+        <input type="button" value="Close" class="close">
+      </div>
+    </div>
+  </div>
+  <!--footer-->
+  <footer>
+    <p>Made by Carlos Bohórquez</p>
+  </footer>
+</body>
+<script src="./javascript/app.js"></script>
+
+</html>
